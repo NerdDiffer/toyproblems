@@ -1,17 +1,11 @@
 // https://leetcode.com/problems/keyboard-row
-package main
+package leetcode
 
 import (
-	"fmt"
 	"strings"
 )
 
-func main() {
-	words := []string{"Hello", "Alaska", "Dad", "Peace", "TypeWriter"}
-	fmt.Println(findWords(words))
-}
-
-func findWords(words []string) []string {
+func FindWords(words []string) []string {
 	// map of letter to row number
 	var keyToRow = map[string]int{
 		"q": 1, "w": 1, "e": 1, "r": 1, "t": 1, "y": 1, "u": 1, "i": 1, "o": 1, "p": 1,
