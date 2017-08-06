@@ -1,7 +1,6 @@
-package main
+package leetcode
 
 import (
-	"fmt"
 	"strings"
 )
 
@@ -23,7 +22,7 @@ func reverseString(s string) string {
 // than k characters left, reverse all of them. If there are less than 2k but
 // greater than or equal to k characters, then reverse the first k characters and
 // left the other as original.
-func reverseStr(s string, k int) string {
+func ReverseStr(s string, k int) string {
 	if k < 2 {
 		return s
 	}
@@ -54,16 +53,4 @@ func reverseStr(s string, k int) string {
 	}
 
 	return strings.Join(result, "")
-}
-
-func main() {
-	//fmt.Println(reverseString("racecar"))
-	//fmt.Println(reverseString("foobar"))
-
-	fmt.Println(reverseStr("abcdefg", 2)) // bacdfeg
-	fmt.Println(reverseStr("abcdefg", 1)) // abcdefg
-	fmt.Println(reverseStr("abcd", 2))    // bacd
-	fmt.Println(reverseStr("abcdefg", 4)) // dbcaefg
-	// just don't crash ...
-	fmt.Println(reverseStr("krmyfshbspcgtesxnnljhfursyissjnsocgdhgfxubewllxzqhpasguvlrxtkgatzfybprfmmfithphckksnvjkcvnsqgsgosfxc", 20))
 }
