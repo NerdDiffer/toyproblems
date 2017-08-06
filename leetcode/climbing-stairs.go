@@ -1,11 +1,7 @@
 // https://leetcode.com/problems/climbing-stairs/
-package main
+package leetcode
 
-import (
-	"toyproblems/toyproblemhelpers"
-)
-
-func climbStairs(n int) int {
+func ClimbStairs(n int) int {
 	if n < 1 {
 		return 0
 	} else if n < 3 {
@@ -21,15 +17,4 @@ func climbStairs(n int) int {
 
 		return cache[n-1]
 	}
-}
-
-func main() {
-	test(3, 3)
-	test(4, 5)
-	test(5, 8)
-}
-
-func test(input, expected int) bool {
-	actual := climbStairs(input)
-	return toyproblemhelpers.PrintCmpInts(actual, expected)
 }
