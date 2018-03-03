@@ -1,4 +1,4 @@
-package main
+package codewars
 
 import (
 	"fmt"
@@ -25,7 +25,7 @@ func SquareOrSquareRoot(input []int) []int {
 	return result
 }
 
-func main() {
+func testSqRoot() {
 	input := []int{4, 3, 9, 7, 2, 1}
 
 	fmt.Println("input:   ", input)

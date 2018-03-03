@@ -1,4 +1,4 @@
-package main
+package codewars
 
 import (
 	"fmt"
@@ -68,7 +68,7 @@ func OperArray(f FParam, arr []int, init int) []int {
 	return result
 }
 
-func main() {
+func runOpenArray() {
 	fmt.Println(Gcdi(48, 18))
 	fmt.Println(Lcmu(21, 6))
 
