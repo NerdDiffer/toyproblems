@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package codewars
 
 import (
 	"strconv"
@@ -8,7 +6,7 @@ import (
 )
 
 func FizzBuzzCuckooClock(time string) (result string) {
-	hh, mm := parse_time(time)
+	hh, mm := parse(time)
 
 	if hh > 12 {
 		hh -= 12
@@ -18,9 +16,8 @@ func FizzBuzzCuckooClock(time string) (result string) {
 
 	if mm == 0 {
 		var cuckoos []string
-		hh_as_int := int(hh)
 
-		for i := 0; i < hh_as_int; i++ {
+		for i := 0; i < hh; i++ {
 			cuckoos = append(cuckoos, "Cuckoo")
 		}
 
@@ -40,20 +37,14 @@ func FizzBuzzCuckooClock(time string) (result string) {
 	return
 }
 
-func parse_time(time string) (hh, mm int64) {
+func parse(time string) (int, int) {
 	hhmm := strings.Split(time, ":")
-	var hours_and_minutes [2]int64
+	var hoursMinutes [2]int64
 
-	for i := 0; i < 2; i++ {
-		num, _ := strconv.ParseInt(hhmm[i], 10, 64) // ignore 2nd return value
-		hours_and_minutes[i] = num
+	for i := 0; i < len(hoursMinutes); i++ {
+		num, _ := strconv.ParseInt(hhmm[i], 10, 64)
+		hoursMinutes[i] = num
 	}
 
-	hh = hours_and_minutes[0]
-	mm = hours_and_minutes[1]
-	return
-}
-
-func main() {
-	fmt.Println(FizzBuzzCuckooClock("21:00"))
+	return int(hoursMinutes[0]), int(hoursMinutes[1])
 }

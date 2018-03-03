@@ -1,8 +1,4 @@
-package main
-
-import (
-	"fmt"
-)
+package codewars
 
 func HasUniqueChar(str string) bool {
 	var counts = map[rune]bool{}
@@ -16,8 +12,4 @@ func HasUniqueChar(str string) bool {
 	}
 
 	return true
-}
-
-func main() {
-	fmt.Println(HasUniqueChar("  nAa"))
 }

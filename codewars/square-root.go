@@ -1,9 +1,6 @@
 package codewars
 
-import (
-	"fmt"
-	"math"
-)
+import "math"
 
 func SquareOrSquareRoot(input []int) []int {
 	result := make([]int, len(input))
@@ -23,16 +20,4 @@ func SquareOrSquareRoot(input []int) []int {
 	}
 
 	return result
-}
-
-func testSqRoot() {
-	input := []int{4, 3, 9, 7, 2, 1}
-
-	fmt.Println("input:   ", input)
-
-	actual := SquareOrSquareRoot(input)
-	expected := []int{2, 9, 3, 49, 4, 1}
-
-	fmt.Println("actual:  ", actual)
-	fmt.Println("expected:", expected)
 }

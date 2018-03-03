@@ -2,7 +2,6 @@ package codewars
 
 import (
 	"bytes"
-	"fmt"
 	"strings"
 )
 
@@ -27,8 +26,4 @@ func repeat(repetitions int, value string) string {
 	}
 
 	return buffer.String()
-}
-
-func runMumbling() {
-	fmt.Println(Accum("ZpglnRxqenU"))
 }

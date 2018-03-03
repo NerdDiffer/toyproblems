@@ -2,7 +2,6 @@
 package codewars
 
 import (
-	"github.com/NerdDiffer/toyproblems/helpers"
 	"strings"
 	"unicode"
 	"unicode/utf8"
@@ -28,16 +27,4 @@ func ToNato(words string) string {
 	}
 
 	return strings.Join(result, " ")
-}
-
-func runTests() {
-	test("If you can read", "India Foxtrot Yankee Oscar Uniform Charlie Alfa November Romeo Echo Alfa Delta")
-	test("Did not see that coming", "Delta India Delta November Oscar Tango Sierra Echo Echo Tango Hotel Alfa Tango Charlie Oscar Mike India November Golf")
-	test("go for it!", "Golf Oscar Foxtrot Oscar Romeo India Tango !")
-}
-
-// make these cheap printing/assertions less ugly looking
-func test(input string, expected string) bool {
-	actual := ToNato(input)
-	return helpers.PrintCmpStrings(actual, expected)
 }
